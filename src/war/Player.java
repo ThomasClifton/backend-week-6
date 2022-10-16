@@ -3,6 +3,9 @@ package war;
 import java.util.ArrayList;
 import java.util.List;
 
+// Class Player
+// Player is designed to resemble a player with a hand of cards with a score.
+// 
 public class Player {
 	private List<Card> hand;
 	private int score;

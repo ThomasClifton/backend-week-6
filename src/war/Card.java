@@ -25,6 +25,7 @@ public class Card {
 		}
 	}
 	
+	//Converts int value to String
 	private String getCardName(int num) {
 		switch(num) {
 			case 2:

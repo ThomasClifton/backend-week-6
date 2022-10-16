@@ -9,6 +9,7 @@ public class App {
 		Deck deck = new Deck();
 		deck.shuffle();
 		
+		// Get names of players
 		System.out.print("Enter Player One Name: ");
 		String name1 = sc.nextLine();
 		System.out.print("Enter Player Two Name: ");
@@ -18,6 +19,7 @@ public class App {
 		Player player1 = new Player(name1);
 		Player player2 = new Player(name2);
 		
+		// Instantiates both players' hands
 		for(int i = 1; i <= 52; i++) {
 			if(i % 2 == 0) {
 				player2.draw(deck);
@@ -27,8 +29,8 @@ public class App {
 			}
 		}
 		
-		
-		
+		// Each player plays a Card and removes it from their hand
+		// PLayer with higher value Card get a point
 		for(int i = 1; i <= 26; i++) {
 			Card card1 = player1.flip();
 			Card card2 = player2.flip();
@@ -56,6 +58,7 @@ public class App {
 		}
 		System.out.println();
 		
+		// Prints winner
 		if(player1.getScore() > player2.getScore()) {
 			System.out.println(player1 + " beat " + player2 + " " + player1.getScore() + " to " + player2.getScore());
 		}

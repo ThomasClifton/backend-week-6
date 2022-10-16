@@ -4,6 +4,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
+// has-a List of Cards
+// default constructor instantiates a deck of cards with all 52 basic playing cards
 public class Deck {
 	private List<Card> cards;
 	
@@ -16,10 +18,12 @@ public class Deck {
 		}
 	}
 	
+	// Shuffles deck
 	public void shuffle() {
 		Collections.shuffle(cards);
 	}
 	
+	// Removes and returns a Card in the Deck so the same cad is not drawn twice
 	public Card draw() {
 		return cards.remove(0);
 	}
